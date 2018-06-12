@@ -1,27 +1,19 @@
-# PlayZeroOne
+У вас есть элементы:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Div: `<div id=”output”></div>`
 
-## Development server
+Add: `<button id=”add-element”>Add</button>`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Необходимо реализовать следующую логику.
 
-## Code scaffolding
+Элемент Div должен быть заполнен символами “0” (100 символов). При нажатии на кнопку Add необходимо с левой стороны в Div добавить символ “1” заменив собой крайний левый символ “0” (то есть количество символов в Div всегда одинаковое).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+После добавления, единица каждые полсекунды смещается вправо (заменяя ноль на текущей позиции) до тех пор пока не дойдет до конца. В этом случае единица должна поменять направление смещения и пойти в обратном направлении. Таким образом единица должна перемещаться от края до края, выполняя смещение раз в полсекунды.
 
-## Build
+Как вы уже поняли, количество единиц которые могут быть добавлены, ограничено количеством символов элемента Div :)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Когда единица встречается с другой единицей она должна поменять направление как в случае с границей.
 
-## Running unit tests
+Также приветствуются улучшения, но не забывайте что код должен оставаться структурированным и лаконичным.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Помните, что ваш код должен быть гибким и способным к доработке функционала.
